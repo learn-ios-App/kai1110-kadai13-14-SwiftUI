@@ -1,21 +1,30 @@
-//
-//  ContentView.swift
-//  kai1110-kadai13-SwiftUI
-//
-//  Created by 渡邊魁優 on 2023/01/14.
-//
 
 import SwiftUI
 
 struct ContentView: View {
+    private let fruits: [FruitsData] = [
+        FruitsData(fruitsName: "リンゴ", isCheck: true),
+        FruitsData(fruitsName: "ミカン", isCheck: false),
+        FruitsData(fruitsName: "パイナップル", isCheck: true),
+        FruitsData(fruitsName: "バナナ", isCheck: false)
+    ]
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            List {
+                ForEach(fruits) { fruit in
+                    HStack {
+                        if fruit.isCheck {
+                            Image(systemName: "checkmark.circle")
+                        }
+                        else {
+                            Image(systemName: "circle")
+                        }
+                        Text(fruit.fruitsName)
+                    }
+                }
+            }
+            .listStyle(InsetListStyle())
         }
-        .padding()
     }
 }
 
