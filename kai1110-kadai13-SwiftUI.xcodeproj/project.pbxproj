@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B5E6ED22972D9D70031470C /* AddFruitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E6ED12972D9D70031470C /* AddFruitsView.swift */; };
 		0B8364EF29728673009ACDB0 /* kai1110_kadai13_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8364EE29728673009ACDB0 /* kai1110_kadai13_SwiftUIApp.swift */; };
 		0B8364F129728673009ACDB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8364F029728673009ACDB0 /* ContentView.swift */; };
 		0B8364F329728676009ACDB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B8364F229728676009ACDB0 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B5E6ED12972D9D70031470C /* AddFruitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFruitsView.swift; sourceTree = "<group>"; };
 		0B8364EB29728673009ACDB0 /* kai1110-kadai13-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kai1110-kadai13-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8364EE29728673009ACDB0 /* kai1110_kadai13_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kai1110_kadai13_SwiftUIApp.swift; sourceTree = "<group>"; };
 		0B8364F029728673009ACDB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				0B8364EE29728673009ACDB0 /* kai1110_kadai13_SwiftUIApp.swift */,
 				0B8364F029728673009ACDB0 /* ContentView.swift */,
+				0B5E6ED12972D9D70031470C /* AddFruitsView.swift */,
 				0B8364FC297289EC009ACDB0 /* FruitsData.swift */,
 				0B8364F229728676009ACDB0 /* Assets.xcassets */,
 				0B8364F429728676009ACDB0 /* Preview Content */,
@@ -143,6 +146,7 @@
 				0B8364F129728673009ACDB0 /* ContentView.swift in Sources */,
 				0B8364EF29728673009ACDB0 /* kai1110_kadai13_SwiftUIApp.swift in Sources */,
 				0B8364FD297289EC009ACDB0 /* FruitsData.swift in Sources */,
+				0B5E6ED22972D9D70031470C /* AddFruitsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
