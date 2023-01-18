@@ -16,12 +16,6 @@ struct ContentView: View {
             List {
                 ForEach(fruits) { fruit in
                     HStack {
-//                        if fruit.isCheck {
-//                            Image(systemName: "checkmark.circle")
-//                        }
-//                        else {
-//                            Image(systemName: "circle")
-//                        }
                         Image(
                             systemName: fruit.isCheck
                                 ? "checkmark.circle"

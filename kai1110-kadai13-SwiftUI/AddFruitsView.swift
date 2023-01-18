@@ -39,8 +39,9 @@ struct AddFruitsView: View {
 struct AddFruitsView_Previews: PreviewProvider {
     @State static var newFruitsName = ""
     @State static var isAddFruitsView = true
+    static let addFruit = {}
 
     static var previews: some View {
-        AddFruitsView(addFruit: <#T##() -> Void#>, newFruitName: $newFruitsName, isAddFruitsView: $isAddFruitsView)
+        AddFruitsView(addFruit: addFruit, newFruitName: $newFruitsName, isAddFruitsView: $isAddFruitsView)
     }
 }
