@@ -2,9 +2,11 @@
 import SwiftUI
 
 struct AddFruitsView: View {
-    let addFruit: () -> Void
-    @Binding var newFruitName: String
-    @Binding var isAddFruitsView: Bool
+    let save: (String) -> Void
+    let cancel: () -> Void
+
+    @State var newFruitName = ""
+
     var body: some View {
         NavigationStack {
             HStack {
@@ -17,16 +19,14 @@ struct AddFruitsView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action:{
-                        addFruit()
-                        newFruitName = ""
-                        isAddFruitsView = false
+                        save(newFruitName)
                     }) {
                         Text("保存")
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
-                        isAddFruitsView = false
+                        cancel()
                     }) {
                         Text("戻る")
                     }
@@ -42,6 +42,9 @@ struct AddFruitsView_Previews: PreviewProvider {
     static let addFruit = {}
 
     static var previews: some View {
-        AddFruitsView(addFruit: addFruit, newFruitName: $newFruitsName, isAddFruitsView: $isAddFruitsView)
+        AddFruitsView(
+            save: { _ in },
+            cancel: {}
+        )
     }
 }

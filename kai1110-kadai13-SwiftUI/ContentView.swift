@@ -9,7 +9,6 @@ struct ContentView: View {
         FruitsData(name: "バナナ", isCheck: false)
     ]
     @State var isAddFruitsView = false
-    @State var newFruitName = ""
     
     var body: some View {
         NavigationStack {
@@ -37,12 +36,18 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $isAddFruitsView) {
-            AddFruitsView(addFruit: addFruit, newFruitName: $newFruitName, isAddFruitsView: $isAddFruitsView)
+            AddFruitsView(
+                save: { name in
+                    fruits.append(
+                        FruitsData(name: name, isCheck: false)
+                    )
+                    isAddFruitsView = false
+                },
+                cancel: {
+                    isAddFruitsView = false
+                }
+            )
         }
-    }
-    func addFruit() {
-        let newFruit = FruitsData(name: newFruitName, isCheck: false)
-        self.fruits.append(newFruit)
     }
 }
 
